@@ -26,27 +26,27 @@ export class UserprofileComponent {
       }
     });
   }
-  registerForm = new FormGroup({
-    username: new FormControl('', [Validators.required]),
-    // email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
-    // is_superuser: new FormControl(false),
-  });
+  // registerForm = new FormGroup({
+  //   username: new FormControl('', [Validators.required]),
+  //   // email: new FormControl('', [Validators.required, Validators.email]),
+  //   password: new FormControl('', [Validators.required]),
+  //   // is_superuser: new FormControl(false),
+  // });
 
-  onSubmit() {
-    if (this.registerForm.valid) {
-      this.usersService.registerUser(this.registerForm.value).subscribe(
-        (response: any) => {
-          console.log('User registered successfully:', response);
-          // You can handle the successful registration here, e.g., show a success message or redirect to another page
-        },
-        (error: any) => {
-          console.error('Error registering user:', error);
-          // You can handle the error here, e.g., show an error message
-        }
-      );
-    } else {
-      // Show an error message or highlight the invalid fields
-    }
-  }
+  // onSubmit() {
+  //   if (this.registerForm.valid) {
+  //     this.usersService.registerUser(this.registerForm.value).subscribe(
+  //       (response: any) => {
+  //         console.log('User registered successfully:', response);
+  //         // You can handle the successful registration here, e.g., show a success message or redirect to another page
+  //       },
+  //       (error: any) => {
+  //         console.error('Error registering user:', error);
+  //         // You can handle the error here, e.g., show an error message
+  //       }
+  //     );
+  //   } else {
+  //     // Show an error message or highlight the invalid fields
+  //   }
+  // }
 }
